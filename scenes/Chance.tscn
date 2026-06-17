@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://duil53kmjij4g"]
 
 [ext_resource type="Texture2D" uid="uid://c1qh8qko1bqt8" path="res://assets/Big_Back.png" id="1_13dh3"]
+[ext_resource type="Script" uid="uid://o1mt6gqodcrm" path="res://scripts/chance.gd" id="1_e7k5c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e7k5c"]
 atlas = ExtResource("1_13dh3")
@@ -21,6 +22,7 @@ animations = [{
 radius = 123.00407
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2049542853]
+script = ExtResource("1_e7k5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1311633157]
 sprite_frames = SubResource("SpriteFrames_cjij7")

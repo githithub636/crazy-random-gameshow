@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://dbtg570krayhk"]
 
+[ext_resource type="PackedScene" uid="uid://duil53kmjij4g" path="res://scenes/Chance.tscn" id="1_rgar6"]
+
 [node name="Testing Zone" type="Node2D" unique_id=2137807239]
+
+[node name="CharacterBody2D" parent="." unique_id=2049542853 instance=ExtResource("1_rgar6")]
+position = Vector2(0, -1)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1085903114]
+zoom = Vector2(3, 3)

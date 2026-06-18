@@ -1,34 +1,43 @@
 [gd_scene format=3 uid="uid://duil53kmjij4g"]
 
-[ext_resource type="Texture2D" uid="uid://c1qh8qko1bqt8" path="res://assets/Big_Back.png" id="1_13dh3"]
 [ext_resource type="Script" uid="uid://o1mt6gqodcrm" path="res://scripts/chance.gd" id="1_e7k5c"]
+[ext_resource type="Texture2D" uid="uid://dshxi32ws42gt" path="res://assets/Chance.png" id="2_e7k5c"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7k5c"]
-atlas = ExtResource("1_13dh3")
-region = Rect2(0, 0, 320, 320)
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjij7"]
+atlas = ExtResource("2_e7k5c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxio8"]
+atlas = ExtResource("2_e7k5c")
+region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cjij7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e7k5c")
+"texture": SubResource("AtlasTexture_cjij7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxio8")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_oxio8"]
-radius = 123.00407
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e7k5c"]
+radius = 7.0
+height = 24.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2049542853]
 script = ExtResource("1_e7k5c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1311633157]
 sprite_frames = SubResource("SpriteFrames_cjij7")
+frame_progress = 0.5078659
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1373819669]
-position = Vector2(0, 18)
-shape = SubResource("CircleShape2D_oxio8")
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_e7k5c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=970737277]

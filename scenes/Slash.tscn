@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dmkr860t06b4e"]
+
+[ext_resource type="Texture2D" uid="uid://daejciyqmjnc8" path="res://assets/Slice1.png" id="1_vgj1v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wnpim"]
+radius = 15.0
+height = 38.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dikwq"]
+atlas = ExtResource("1_vgj1v")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q02qe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dikwq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Slash" type="CollisionShape2D" unique_id=399121038]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_wnpim")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=171553235]
+rotation = -1.5707964
+sprite_frames = SubResource("SpriteFrames_q02qe")

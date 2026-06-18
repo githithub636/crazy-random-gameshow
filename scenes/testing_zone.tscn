@@ -4,10 +4,13 @@
 
 [node name="Testing Zone" type="Node2D" unique_id=2137807239]
 
-[node name="CharacterBody2D" parent="." unique_id=2049542853 instance=ExtResource("1_rgar6")]
-position = Vector2(0, -1)
-speed = 100.0
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1085903114]
 position = Vector2(0, -1)
-zoom = Vector2(3, 3)
+ignore_rotation = false
+zoom = Vector2(5, 5)
+limit_enabled = false
+position_smoothing_enabled = true
+
+[node name="CharacterBody2D" parent="." unique_id=2049542853 instance=ExtResource("1_rgar6")]
+position = Vector2(0, -1)
+speed = 300.0

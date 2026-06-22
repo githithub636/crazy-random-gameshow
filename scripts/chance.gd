@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var slash = $Slash
+
 @export var speed: float = 200.0
 
 func _physics_process(delta: float) -> void:
@@ -15,3 +17,8 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = direction * speed
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_accept"):
+		var mouse_pos = get_global_mouse_position()
+		slash.play(global_position,mouse_pos)

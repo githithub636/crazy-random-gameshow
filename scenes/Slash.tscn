@@ -26,7 +26,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dikwq")
 }],
-"loop": true,
+"loop": false,
 "name": &"slash",
 "speed": 5.0
 }]

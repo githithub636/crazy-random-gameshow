@@ -19,6 +19,6 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("RMB"):
 		var mouse_pos = get_global_mouse_position()
 		slash.play(global_position,mouse_pos)

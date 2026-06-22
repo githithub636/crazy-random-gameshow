@@ -24,4 +24,5 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	#hide & disable
 	visible = false
 	$CollisionShape2D.disabled = true
+	print("yayay")
 	

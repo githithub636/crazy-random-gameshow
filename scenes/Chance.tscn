@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_oxio8")
 }],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 2.0
 }]
@@ -42,3 +42,7 @@ position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_e7k5c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=970737277]
+
+[node name="Timer" type="Timer" parent="." unique_id=1205446954]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

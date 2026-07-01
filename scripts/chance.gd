@@ -2,7 +2,11 @@ extends CharacterBody2D
 
 @onready var slash = $Slash
 
+@onready var timer: Timer = $Timer
+
 @export var speed: float = 200.0
+
+var can_slash: bool = true
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -19,6 +23,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("RMB"):
+	if (Input.is_action_just_pressed("RMB") and can_slash == true):
 		var mouse_pos = get_global_mouse_position()
 		slash.play(global_position,mouse_pos)
+		can_slash = false
+		timer.start()
+
+func _on_timer_timeout() -> void:
+	can_slash = true

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name player
 
 @onready var slash = $Slash
 
@@ -7,6 +8,11 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 
 var can_slash: bool = true
+
+var pos = global_position
+
+	
+
 
 func _physics_process(delta: float) -> void:
 	var direction = Vector2.ZERO
@@ -28,6 +34,7 @@ func _process(delta: float) -> void:
 		slash.play(global_position,mouse_pos)
 		can_slash = false
 		timer.start()
+	pos = global_position
 
 func _on_timer_timeout() -> void:
 	can_slash = true

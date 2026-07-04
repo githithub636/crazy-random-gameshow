@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b2ju0womb6wmn"]
+
+[ext_resource type="Script" uid="uid://deahphb7cj2if" path="res://scripts/pawn.gd" id="1_ccfo0"]
+[ext_resource type="Texture2D" uid="uid://drhc7j6udtb34" path="res://assets/Pawn.png" id="2_eqwak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te1vi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eqwak")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ckt5"]
+radius = 7.0
+height = 28.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_te1vi"]
+size = Vector2(14, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ckt5"]
+size = Vector2(150, 150)
+
+[node name="Pawn" type="CharacterBody2D" unique_id=1886271932]
+script = ExtResource("1_ccfo0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1404977157]
+sprite_frames = SubResource("SpriteFrames_te1vi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1867585389]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_1ckt5")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=549149220]
+position = Vector2(0, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518126314]
+shape = SubResource("RectangleShape2D_te1vi")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1256337617]
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=848729926]
+
+[node name="SearchBox" type="Area2D" parent="." unique_id=1420136634]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox" unique_id=284851138]
+shape = SubResource("RectangleShape2D_1ckt5")
+
+[connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name enemy
 
 @onready var player =  $"../CharacterBody2D"
 
@@ -7,6 +8,8 @@ extends CharacterBody2D
 @onready var search_box = $SearchBox
 
 var found_player = false
+
+var pawn_health = 3  
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

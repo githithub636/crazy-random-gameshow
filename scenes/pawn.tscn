@@ -24,7 +24,7 @@ size = Vector2(14, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ckt5"]
 size = Vector2(150, 150)
 
-[node name="Pawn" type="CharacterBody2D" unique_id=1886271932]
+[node name="Pawn" type="CharacterBody2D" unique_id=1886271932 groups=["enemies"]]
 script = ExtResource("1_ccfo0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1404977157]

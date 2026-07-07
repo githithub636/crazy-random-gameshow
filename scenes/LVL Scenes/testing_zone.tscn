@@ -1,25 +1,24 @@
 [gd_scene format=3 uid="uid://dbtg570krayhk"]
 
-[ext_resource type="PackedScene" uid="uid://duil53kmjij4g" path="res://scenes/chance.tscn" id="1_rgar6"]
-[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/slash.tscn" id="2_pwbe8"]
+[ext_resource type="PackedScene" uid="uid://duil53kmjij4g" path="res://scenes/Chance.tscn" id="1_rgar6"]
+[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/Slash.tscn" id="2_pwbe8"]
 [ext_resource type="PackedScene" uid="uid://b2ju0womb6wmn" path="res://scenes/pawn.tscn" id="3_0peef"]
 
-[node name="Testing Zone" type="Node2D" unique_id=2137807239]
+[node name="Testing Zone" type="Node2D" unique_id=2137807239 groups=["player"]]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1085903114]
 position = Vector2(0, -1)
 ignore_rotation = false
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 limit_enabled = false
 position_smoothing_enabled = true
 
 [node name="CharacterBody2D" parent="." unique_id=2049542853 instance=ExtResource("1_rgar6")]
-position = Vector2(51, -99)
+position = Vector2(72, 15)
 speed = 175.0
-metadata/_edit_group_ = true
 
 [node name="Slash" parent="CharacterBody2D" unique_id=399121038 instance=ExtResource("2_pwbe8")]
 position = Vector2(11, -2)
 
 [node name="Pawn2" parent="." unique_id=233183199 instance=ExtResource("3_0peef")]
-position = Vector2(-118, -131)
+position = Vector2(-88, -5)

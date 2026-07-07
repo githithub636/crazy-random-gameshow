@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name player
+
 
 @onready var slash = $Slash
 

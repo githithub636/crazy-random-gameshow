@@ -1,5 +1,7 @@
 extends Area2D
 
+@export var damage := 1 
+
 func _ready() -> void:
 	#hides slash
 	visible = false
@@ -19,6 +21,7 @@ func play(player_position: Vector2, mouse_position: Vector2) -> void:
 	#plays animation
 	visible = true
 	$AnimatedSprite2D.play("slash")
+	$CollisionShape2D.disabled = false
 	
 func _on_animated_sprite_2d_animation_finished() -> void:
 	#hide & disable
@@ -28,5 +31,8 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 	
 
 
-#func _on_body_entered(body: Node2D) -> void:
-	#if body is enemy
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		print("jojo")
+		body.take_damage(damage)

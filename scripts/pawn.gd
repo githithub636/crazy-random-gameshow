@@ -33,41 +33,53 @@ func _process(delta: float) -> void:
 			
 func move():
 
-	
-	
-	
-	
-	if can_move == true:
-		move_timer.start()
-		can_move = false
-		if randf() < 0.5:
-			velocity.x += 250
-		else:
-			velocity.y -= 250
-		attack_count +=1
+	if found_player == true:		
+		#QUADRANT 1
+		if (player_angle <= 0 and player_angle >= -90):
+			if can_move == true:
+				move_timer.start()
+				can_move = false
+				if randf() < 0.5:
+					velocity.x += 250
+				else:
+					velocity.y -= 250
+				attack_count +=1
+				
+		#QUADRANT 2
+		elif (player_angle <= -90 and player_angle >= -180):
+			if can_move == true:
+				move_timer.start()
+				can_move = false
+				if randf() < 0.5:
+					velocity.x -= 250
+				else:
+					velocity.y -= 250
+				attack_count +=1
+				
 			
-	#QUADRANT 1
-	if (player_angle <= 0 and player_angle >= -90):
-		#if can_move == true:
-			#move_timer.start()
-			#can_move = false
-			#if randf() < 0.5:
-				#velocity.x += 250
-			#else:
-				#velocity.y -= 250
-			#attack_count +=1
-			pass
-	#QUADRANT 2
-	elif (player_angle <= -90 and player_angle >= -180):
-		print(2)
-		
-	#QUADRANT 3
-	elif (player_angle >= 90 and player_angle <= 180):
-		print(3)
-		
-	#QUADRANT 4
-	elif (player_angle >= 0 and player_angle <= 90):
-		print(4)
+		#QUADRANT 3
+		elif (player_angle >= 90 and player_angle <= 180):
+			if can_move == true:
+				move_timer.start()
+				can_move = false
+				if randf() < 0.5:
+					velocity.x -= 250
+				else:
+					velocity.y += 250
+				attack_count +=1
+				
+			
+		#QUADRANT 4
+		elif (player_angle >= 0 and player_angle <= 90):
+			if can_move == true:
+				move_timer.start()
+				can_move = false
+				if randf() < 0.5:
+					velocity.x += 250
+				else:
+					velocity.y += 250
+				attack_count +=1
+				
 	
 func _on_search_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and found_player == false:

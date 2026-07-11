@@ -23,3 +23,12 @@ position = Vector2(11, -2)
 
 [node name="Pawn2" parent="." unique_id=233183199 instance=ExtResource("3_0peef")]
 position = Vector2(-88, -5)
+
+[node name="Pawn" parent="." unique_id=1886271932 instance=ExtResource("3_0peef")]
+position = Vector2(234, -48)
+
+[node name="Pawn3" parent="." unique_id=80427638 instance=ExtResource("3_0peef")]
+position = Vector2(20, 190)
+
+[node name="Pawn4" parent="." unique_id=1925792670 instance=ExtResource("3_0peef")]
+position = Vector2(269, 157)

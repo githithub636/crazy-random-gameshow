@@ -49,6 +49,4 @@ shape = SubResource("RectangleShape2D_te1vi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox" unique_id=284851138]
 shape = SubResource("RectangleShape2D_1ckt5")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=294410592]
-
 [connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]

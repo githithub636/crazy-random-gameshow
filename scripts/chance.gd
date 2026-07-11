@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("RMB") and can_slash == true):
+	if (Input.is_action_just_pressed("LMB") and can_slash == true):
 		var mouse_pos = get_global_mouse_position()
 		slash.play(global_position,mouse_pos)
 		can_slash = false

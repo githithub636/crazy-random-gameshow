@@ -14,8 +14,9 @@ limit_enabled = false
 position_smoothing_enabled = true
 
 [node name="CharacterBody2D" parent="." unique_id=2049542853 instance=ExtResource("1_rgar6")]
-position = Vector2(72, 15)
+position = Vector2(81, 38)
 speed = 175.0
+metadata/_edit_group_ = true
 
 [node name="Slash" parent="CharacterBody2D" unique_id=399121038 instance=ExtResource("2_pwbe8")]
 position = Vector2(11, -2)

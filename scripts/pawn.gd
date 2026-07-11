@@ -7,6 +7,8 @@ class_name enemy
 
 @onready var search_box = $SearchBox
 
+@onready var move_timer: Timer = $MoveTimer
+
 var found_player = false
 
 var health = 3  
@@ -15,24 +17,46 @@ var player_angle = 0
 
 var can_move = true
 
+var attack_count = 0
+
+func _physics_process(delta: float) -> void:
+	velocity = velocity.move_toward(Vector2.ZERO,5.0)
+	move()
+	move_and_slide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	player_angle = rad_to_deg((player.position - position).angle())
 	print(player_angle)
-	move()
-	move_and_slide()
+	
 #player.pos.x < position.x:
 			
 func move():
+
+	
+	
+	
+	
+	if can_move == true:
+		move_timer.start()
+		can_move = false
+		if randf() < 0.5:
+			velocity.x += 250
+		else:
+			velocity.y -= 250
+		attack_count +=1
+			
 	#QUADRANT 1
 	if (player_angle <= 0 and player_angle >= -90):
-		print(1)
-		if can_move == true:
-			velocity.x += 100
-			
-			can_move = false
-			
+		#if can_move == true:
+			#move_timer.start()
+			#can_move = false
+			#if randf() < 0.5:
+				#velocity.x += 250
+			#else:
+				#velocity.y -= 250
+			#attack_count +=1
+			pass
 	#QUADRANT 2
 	elif (player_angle <= -90 and player_angle >= -180):
 		print(2)
@@ -56,3 +80,7 @@ func take_damage(amount):
 	if health <= 0:
 		queue_free()
 		
+
+
+func _on_move_timer_timeout() -> void:
+	can_move = true

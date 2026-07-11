@@ -41,6 +41,7 @@ position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_te1vi")
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=1256337617]
+wait_time = 0.5
 
 [node name="AttackTimer" type="Timer" parent="." unique_id=848729926]
 
@@ -49,4 +50,5 @@ shape = SubResource("RectangleShape2D_te1vi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox" unique_id=284851138]
 shape = SubResource("RectangleShape2D_1ckt5")
 
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
 [connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]

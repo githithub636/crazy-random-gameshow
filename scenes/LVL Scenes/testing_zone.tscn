@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbtg570krayhk"]
 
 [ext_resource type="PackedScene" uid="uid://duil53kmjij4g" path="res://scenes/Chance.tscn" id="1_rgar6"]
-[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/slash.tscn" id="2_pwbe8"]
+[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/Slash.tscn" id="2_pwbe8"]
 [ext_resource type="PackedScene" uid="uid://b2ju0womb6wmn" path="res://scenes/pawn.tscn" id="3_0peef"]
 
 [node name="Testing Zone" type="Node2D" unique_id=2137807239 groups=["player"]]
@@ -22,13 +22,13 @@ metadata/_edit_group_ = true
 position = Vector2(11, -2)
 
 [node name="Pawn2" parent="." unique_id=233183199 instance=ExtResource("3_0peef")]
-position = Vector2(-88, -5)
+position = Vector2(-97, -22)
 
 [node name="Pawn" parent="." unique_id=1886271932 instance=ExtResource("3_0peef")]
-position = Vector2(234, -48)
+position = Vector2(238, -148)
 
 [node name="Pawn3" parent="." unique_id=80427638 instance=ExtResource("3_0peef")]
-position = Vector2(20, 190)
+position = Vector2(-244, 157)
 
 [node name="Pawn4" parent="." unique_id=1925792670 instance=ExtResource("3_0peef")]
-position = Vector2(269, 157)
+position = Vector2(242, 157)

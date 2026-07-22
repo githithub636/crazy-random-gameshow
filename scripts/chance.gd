@@ -7,6 +7,8 @@ extends CharacterBody2D
 
 @export var speed: float = 200.0
 
+var health = 5
+
 var can_slash: bool = true
 
 var pos = global_position
@@ -38,3 +40,10 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	can_slash = true
+
+func take_damage(amount):
+	health -= amount
+	print(health)
+	if health <= 0:
+		get_tree().reload_current_scene()
+	

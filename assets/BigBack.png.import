@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1qh8qko1bqt8"
-path="res://.godot/imported/Big_Back.png-e4cdf0917967674f2b1280ee7d0f258a.ctex"
+uid="uid://cxxtk2pyksl4t"
+path="res://.godot/imported/BigBack.png-3005b86d34d1004b30ea714aa34955ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Big_Back.png"
-dest_files=["res://.godot/imported/Big_Back.png-e4cdf0917967674f2b1280ee7d0f258a.ctex"]
+source_file="res://assets/BigBack.png"
+dest_files=["res://.godot/imported/BigBack.png-3005b86d34d1004b30ea714aa34955ef.ctex"]
 
 [params]
 

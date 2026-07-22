@@ -41,6 +41,6 @@ frame_progress = 0.5078659
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_e7k5c")
 
-[node name="Timer" type="Timer" parent="." unique_id=1205446954]
+[node name="Timer" type="Timer" parent="." unique_id=1205446954 groups=["player"]]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

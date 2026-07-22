@@ -50,5 +50,6 @@ wait_time = 0.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SearchBox" unique_id=284851138]
 shape = SubResource("RectangleShape2D_1ckt5")
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
 [connection signal="body_entered" from="SearchBox" to="." method="_on_search_box_body_entered"]

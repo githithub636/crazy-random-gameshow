@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://baj84donnw55n"]
+
+[ext_resource type="Script" uid="uid://dpnvaj61hry51" path="res://BigBack.gd" id="1_ups7b"]
+[ext_resource type="Texture2D" uid="uid://cxxtk2pyksl4t" path="res://assets/BigBack.png" id="2_r2ran"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75p7r"]
+atlas = ExtResource("2_r2ran")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_te1vi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75p7r")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1ckt5"]
+radius = 13.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1934241217]
+script = ExtResource("1_ups7b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=571470993]
+sprite_frames = SubResource("SpriteFrames_te1vi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1694574578]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_1ckt5")

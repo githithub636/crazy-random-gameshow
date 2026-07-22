@@ -7,7 +7,13 @@ class_name enemy
 
 @onready var search_box = $SearchBox
 
+@onready var hurt_box = $Area2D
+
 @onready var move_timer: Timer = $MoveTimer
+
+@onready var collider_box = $SearchBox
+
+const DAMAGE = 1
 
 var found_player = false
 
@@ -106,12 +112,13 @@ func move():
 			print("yolo")
 			attacking = true
 			velocity += direction * 400.0
+			$CollisionShape2D.disabled = true 
 			
 		if (attack_count == 3 and attacking == true):
 			if velocity == Vector2.ZERO:
 				attack_count = 0
 				attacking = false
-			
+				$CollisionShape2D.disabled = false
 			
 func _on_search_box_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") and found_player == false:
@@ -128,3 +135,9 @@ func take_damage(amount):
 
 func _on_move_timer_timeout() -> void:
 	can_move = true
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if (body.is_in_group("player") and $CollisionShape2D.disabled == true):
+		print("jojo")
+		body.take_damage(DAMAGE)

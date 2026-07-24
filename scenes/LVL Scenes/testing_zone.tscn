@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dbtg570krayhk"]
 
 [ext_resource type="PackedScene" uid="uid://duil53kmjij4g" path="res://scenes/Chance.tscn" id="1_rgar6"]
-[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/slash.tscn" id="2_pwbe8"]
+[ext_resource type="PackedScene" uid="uid://dmkr860t06b4e" path="res://scenes/Slash.tscn" id="2_pwbe8"]
 [ext_resource type="PackedScene" uid="uid://b2ju0womb6wmn" path="res://scenes/pawn.tscn" id="3_0peef"]
 
 [node name="Testing Zone" type="Node2D" unique_id=2137807239 groups=["player"]]

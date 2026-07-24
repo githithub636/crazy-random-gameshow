@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://baj84donnw55n"]
 
-[ext_resource type="Script" uid="uid://dpnvaj61hry51" path="res://BigBack.gd" id="1_ups7b"]
+[ext_resource type="Script" uid="uid://dpnvaj61hry51" path="res://scripts/BigBack.gd" id="1_ups7b"]
 [ext_resource type="Texture2D" uid="uid://cxxtk2pyksl4t" path="res://assets/BigBack.png" id="2_r2ran"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_75p7r"]

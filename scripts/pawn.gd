@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name enemy
+
 
 @onready var player =  $"../CharacterBody2D"
 

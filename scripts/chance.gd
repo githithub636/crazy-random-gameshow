@@ -45,5 +45,6 @@ func take_damage(amount):
 	health -= amount
 	print(health)
 	if health <= 0:
-		get_tree().reload_current_scene()
+		get_tree().call_deferred("reload_current_scene")
+		
 	
